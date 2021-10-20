@@ -56,7 +56,7 @@ contract MappingEnumStruct {
     } 
 
     // Add a capital
-    function addCapital(string countryCheck, string capital) public {
+    function addCapital(string memory countryCheck, string memory capital) public {
 
         // Store the capital on per country basis
         
@@ -64,19 +64,19 @@ contract MappingEnumStruct {
     }
 
     // Returns the capital for the country 
-    function getCapital(string countryCheck) public view returns (string){
+    function getCapital(string memory countryCheck) public view returns (string memory){
 
         return capitals[countryCheck];
 
     }
 
     // Remove the key value pair from the mapping
-    function removeCapital(string countryCheck) public {
+    function removeCapital(string memory countryCheck) public {
         delete(capitals[countryCheck]);
     }
 
     // get the value at specified index
-    function getContinent(uint8 arg) public pure returns (string){
+    function getContinent(uint8 arg) public pure returns (string memory){
         if(arg == uint8(continents.Africa)) return "Africa";
         if(arg == uint8(continents.Antartica)) return "Antartica";
         if(arg == uint8(continents.Asia)) return "Asia";

@@ -5,7 +5,7 @@ contract UtilContract {
 
   // Concatenates strings
   // Perfect example of a "pure" function - no reference to any storage
-  function  concatenate(string s1, string s2) public pure returns(string) {
+  function  concatenate(string memory s1, string memory s2) public pure returns(string memory) {
 
     bytes memory a = bytes(s1);
     bytes memory b = bytes(s2);
@@ -17,7 +17,7 @@ contract UtilContract {
       bm[k++] = a[i];
     }
 
-    for (i = 0; i < b.length; i++) {
+    for (uint i = 0; i < b.length; i++) {
       bm[k++] = b[i];
     }
 

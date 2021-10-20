@@ -69,13 +69,13 @@ contract Globals {
     }
 
     // Demonstrates the use of the msg object
-    function getMsgInformation() public view returns (bytes data, bytes4  sig, address sender) {
+    function getMsgInformation() public view returns (bytes memory data, bytes4  sig, address sender) {
         data = msg.data;
         sig = msg.sig;
         sender = msg.sender;
     }
 
-    function  revertBehavior(string name) public returns (bool) {
+    function  revertBehavior(string memory name) public returns (bool) {
         lastCaller = name;
         // In Ganache or TestRPC throw cannot be tested (there is a way but its kludgy)
         // Uncommenting this line would lead to exception related to JUMP 
@@ -91,7 +91,7 @@ contract Globals {
         return true;
     }
 
-    function  callCrypto(string str) public pure returns (bytes32[5] dat) {
+    function  callCrypto(string memory str) public pure returns (bytes32[5] memory dat) {
         dat[0] = keccak256(str);
         
         //dat[1] = sha3(str);  // sha3 is deprecated

@@ -16,7 +16,7 @@ contract  AbstractContract {
   
   // constructor
   constructor() public {
-    name = agent.name;
+    // name = agent.name;
   }
   // function  AbstractContract(string name) public {
   //   agent.name = name;
@@ -26,7 +26,7 @@ contract  AbstractContract {
   function  calculateAgentCommission(uint16 saleAmount) public;
 
   // Get the agent information
-  function  getAgentInformation() public view returns (string name, uint commission) {
+  function  getAgentInformation() public view returns (string memory name, uint commission) {
     name = agent.name;
     commission = agent.commission;
   }

@@ -6,13 +6,13 @@ contract Funcs {
   uint8   ownerAge;
 
   // Constructor
-  constructor(string name, uint8 age) public {
+  constructor(string memory name, uint8 age) public {
     ownerName = name;
     ownerAge = age;
   }
 
   // Sets the name
-  function  setOwnerInfo(string name, uint8 age) public {
+  function  setOwnerInfo(string memory name, uint8 age) public {
     ownerName = name;
     ownerAge = age;
   }
@@ -21,7 +21,7 @@ contract Funcs {
     // Not available outside this contract
   }
 
-  function  getOwnerInfo() returns (string name, uint8 age){
+  function  getOwnerInfo() public returns (string memory name, uint8 age){
     name = ownerName;
     age = ownerAge;
   }
@@ -40,20 +40,20 @@ contract Funcs {
 
 
   // Shows how multiple values are received from a function call
-  function  multiReturnCaller() returns (string n,uint8 a){
+  function  multiReturnCaller() public returns (string memory n,uint8 a){
     // Create a tuple
     var (name, age) = getOwnerInfo();
   }
 
 
   // Get the name
-  function  getOwnerName() returns (string) {
+  function  getOwnerName() public returns (string memory) {
 
     return ownerName;
   }
 
   // Get the age
-  function  getOwnerAge() returns(uint8 age){
+  function  getOwnerAge() public returns(uint8 age){
     age = ownerAge;
     //return ownerAge;
   }

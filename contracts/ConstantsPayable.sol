@@ -12,7 +12,7 @@ contract ConstantsPayable {
     // This function will NOT update the lastCaller 
     // variable's value as it is marked constant
     // Compiler implicitly takes contant as a view function
-    function  setLastCaller(string name) public view returns(string) {
+    function  setLastCaller(string memory name) public view returns(string memory) {
         lastCaller = name;
     }
 
@@ -24,20 +24,20 @@ contract ConstantsPayable {
 
 
     // This function can receive ethers
-    function receiveEthers(string name)   payable public  {
+    function receiveEthers(string memory name)   payable public  {
         lastSender = msg.sender;
         lastReceived = msg.value;
         lastCaller = name;
     }
 
     function  getBalance() public view returns (uint){
-        return this.balance;
+        return address(this).balance;
     }
 
     // Fallback function
     // This function gets invoked when contract receives ethers
     // without the function data. 
-    function() payable public {
+    function() payable external {
         // Max gas that can be spent in this function is 2300
         // msg.value has the number wei received
         // msg.sender has the address of the sender

@@ -1,17 +1,17 @@
 pragma solidity >0.4.99 <0.6.0;
 
-/**
- * Demonstrates the use of struct
- **/
+// /**
+//  * Demonstrates the use of struct
+//  **/
 
-contract Struct {
+// contract Struct {
 
-  struct Country {
+//   struct Country {
 
-  }
+//   }
 
 
-  constructor() public {
-    // constructor
-  }
-}
+//   constructor() public {
+//     // constructor
+//   }
+// }

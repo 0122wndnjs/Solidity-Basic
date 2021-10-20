@@ -40,7 +40,7 @@ contract Events {
         highBidder.bid = 1000;
     }
 
-    function  bid(string name) payable public timed {
+    function  bid(string memory name) payable public timed {
         // Bids allowed in increments of 10 wei
         if(msg.value > (highBidder.bid + 10)) {
             // Return the loser's bid
@@ -60,7 +60,7 @@ contract Events {
         }
     }
 
-    function  getHighBidder() public view returns(string name){
+    function  getHighBidder() public view returns(string memory name){
         name = highBidder.name;
     }
 

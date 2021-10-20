@@ -11,12 +11,12 @@ import "./FuncTypes.sol";
 contract FuncTypesCaller {
   
   // Function takes the address of FuncTypes & String
-  function  callExternal(address funcTypesAddr, string str) external returns (uint){
+  function  callExternal(address funcTypesAddr, string calldata str) external returns (uint){
       FuncTypes funcTypes = FuncTypes(funcTypesAddr);
       return funcTypes.indirectCall(str);
   }
 
-  function  callAsTransaction(address funcTypesAddr, string str) external returns (uint){
+  function  callAsTransaction(address funcTypesAddr, string calldata str) external returns (uint){
       bool flag = funcTypesAddr.call(bytes4(sha3("indirectCall(string)")), str);
       if(!flag) /**throw;*Deprecated*/ revert();
 

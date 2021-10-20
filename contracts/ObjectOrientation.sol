@@ -10,7 +10,7 @@ contract ObjectOrientation is AbstractContract, UtilContract {
 
 
   // Constructor invokes the constructor of the base class
-  constructor(string agentName, uint8 rate) public AbstractContract(agentName) {
+  constructor(string memory agentName, uint8 rate) public AbstractContract(agentName) {
     commissionRate = rate;
   }
 
@@ -21,11 +21,11 @@ contract ObjectOrientation is AbstractContract, UtilContract {
   }
 
   // OVERLOADING - following two functions have the same name
-  function  getOwnerInfo() public returns (string name, uint8 age) {
+  function  getOwnerInfo() public returns (string memory name, uint8 age) {
     /** ignore warnings - they are due to unused vars & args */
   }
   
-  function  getOwnerInfo(uint8 greaterThan) public  returns (string name, uint8 age) {
+  function  getOwnerInfo(uint8 greaterThan) public  returns (string memory name, uint8 age) {
      /** ignore warnings - they are due to unused vars & args */
   }
 

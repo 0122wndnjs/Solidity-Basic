@@ -22,7 +22,7 @@ contract SpecialArrays {
   string    stringStorage = "abcde";
 
   // Converts the bytes to string
-  function conversionTest() public pure returns(string) {
+  function conversionTest() public pure returns(string memory) {
     bytes   memory helloSolidity = "Hello Solidity!!!";
     string  memory converted = string(helloSolidity);
     return converted;

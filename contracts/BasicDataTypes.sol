@@ -28,7 +28,7 @@ contract BasicDataTypes {
             return;
         }         
 
-        var deduced = x8;    // Compiler automagically assigns the type uin8 to variable deduced;
+        uint8 deduced = x8;    // Compiler automagically assigns the type uin8 to variable deduced;
         // deduced = x256;   // This will fail to compile because deduced is set to type uin8
 
         uint balance = owner.balance;

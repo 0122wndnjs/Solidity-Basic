@@ -24,12 +24,12 @@ contract DataLocation {
   //uint memory amount;
   //uint[] memory some;
 
-  function defaultAction(uint[] args) public returns (uint[] dat) {}
+  function defaultAction(uint[] memory args) public returns (uint[] memory dat) {}
 
 
   function  forcedAction(uint[] storage args) internal returns(uint[] storage dat) {}
 
-  function testFunction(){
+  function testFunction() public {
     // This will give error
     // uint[]  localArray;
 
@@ -56,7 +56,7 @@ contract DataLocation {
 
   // constructor
   constructor() public {
-    
+
   }
 
 }

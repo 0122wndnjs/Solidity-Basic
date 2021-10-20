@@ -30,7 +30,7 @@ contract CheckNulls {
         bool  flag;
         // All of the following will set flag to true
         flag = (owner == address(0x0));
-        flag = (owner == 0x0);
+        flag = (owner == address(0x0),
         // For string check its length
         flag = (bytes(name).length == 0);
         // For bytes##
@@ -40,7 +40,7 @@ contract CheckNulls {
         // For static array check depends on the element type
         flag = (staticArray[0] == 0);
         // Struct - check for some attribute of struct for 0 value
-        flag = (someStruct.owner == 0x0);
+        flag = (someStruct.owner == address(0x0);
         flag = (bytes(someStruct.name).length == 0);
         // mapping - all keys have 0 values i.e., all keys exist
         flag = (map[19] == 0x0);

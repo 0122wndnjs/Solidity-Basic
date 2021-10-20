@@ -22,7 +22,7 @@ contract FuncTypes {
 
     // For demo purposes
     // Calls using the state variable reference rather than actual function
-    function  indirectCall(string  data) external returns(uint len){
+    function  indirectCall(string calldata data) external returns(uint len){
       len = lengthFunctionVar(data);
     }
 }
