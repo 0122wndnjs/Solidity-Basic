@@ -8,7 +8,7 @@ contract String {
     string  public  some;
     bytes   public  bome;
 
-    function String() public {
+    constructor() public {
         // constructor
         bome = "Solidity is FUN!!!";
         // bome=bytes(some);

@@ -10,8 +10,7 @@ contract Calculator {
   // Result of the operation are always stored in this variable
   uint result=10;
 
-  function Calculator() public {
-    // constructor
+  constructor() public {
     
   }
 

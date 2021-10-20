@@ -7,7 +7,7 @@ contract BasicDataTypes {
     address owner;      // Address of the owner
     uint    ownerInitialBalance;
 
-    function BasicDataTypes(address addr) public {
+    constructor(address addr) public {
 
 
         owner = addr;

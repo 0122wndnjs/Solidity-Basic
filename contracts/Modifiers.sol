@@ -11,7 +11,7 @@ contract Modifiers {
     uint[]          lastBid;
     address[]       lastBidder;
 
-    function  Modifiers() public {
+    constructor() public {
         owner = msg.sender;
     }
 

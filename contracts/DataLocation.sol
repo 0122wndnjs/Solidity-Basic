@@ -55,8 +55,8 @@ contract DataLocation {
   }
 
   // constructor
-  function DataLocation() public {
-    /** Does nothing in demo code**/
+  constructor() public {
+    
   }
 
 }

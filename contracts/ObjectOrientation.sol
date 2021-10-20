@@ -10,7 +10,7 @@ contract ObjectOrientation is AbstractContract, UtilContract {
 
 
   // Constructor invokes the constructor of the base class
-  function ObjectOrientation(string agentName, uint8 rate) public AbstractContract(agentName) {
+  constructor(string agentName, uint8 rate) public AbstractContract(agentName) {
     commissionRate = rate;
   }
 

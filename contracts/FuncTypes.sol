@@ -11,7 +11,7 @@ contract FuncTypes {
     function(string memory) internal returns(uint) lengthFunctionVar;
 
     // Constructor
-    function  FuncTypes(){
+    constructor() public {
       lengthFunctionVar = actualLengthFunction;
     }
 

@@ -11,7 +11,7 @@ contract Struct {
   }
 
 
-  function Struct() {
+  constructor() public {
     // constructor
   }
 }

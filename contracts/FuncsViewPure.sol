@@ -78,7 +78,7 @@ contract FuncsViewPure {
     // uint local = 10 + someValue;  
   }
 
-  function FuncsViewPure() public {
+  constructor() public {
     // constructor
     someValue = 10;
   }

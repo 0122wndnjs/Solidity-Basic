@@ -35,7 +35,7 @@ contract Events {
 
     
 
-    function Events() public{
+    constructor() public{
         // Starts the bidding at 1000 wei
         highBidder.bid = 1000;
     }

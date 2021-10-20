@@ -12,11 +12,11 @@ contract ConstantsPayable {
     // This function will NOT update the lastCaller 
     // variable's value as it is marked constant
     // Compiler implicitly takes contant as a view function
-    function  setLastCaller(string name) constant public {
+    function  setLastCaller(string name) public view returns(string) {
         lastCaller = name;
     }
 
-    function   ConstantsPayable() public {
+    constructor() public {
         // Storage constant initialization NOT allowed
         // in constructor
         creationTime = now;

@@ -15,9 +15,12 @@ contract  AbstractContract {
   AgentStruct    agent;
   
   // constructor
-  function  AbstractContract(string name) public {
-    agent.name = name;
+  constructor() public {
+    name = agent.name;
   }
+  // function  AbstractContract(string name) public {
+  //   agent.name = name;
+  // }
 
   // Abstract - no body for the function
   function  calculateAgentCommission(uint16 saleAmount) public;

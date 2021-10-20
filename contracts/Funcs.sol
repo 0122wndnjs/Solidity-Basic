@@ -6,7 +6,7 @@ contract Funcs {
   uint8   ownerAge;
 
   // Constructor
-  function  Funcs(string name, uint8 age) public {
+  constructor(string name, uint8 age) public {
     ownerName = name;
     ownerAge = age;
   }
